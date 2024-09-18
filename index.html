@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assingnment 2</title>
+    <title>Assignment 2</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
 </head>
@@ -16,14 +16,18 @@
                     <p class="first-heading">Fitness</p>
                 </div>
                 <nav class="navbar">
-                    <ul role="list">
-                        <li class="navitem"><a class="nav-links" href="#"> <button class="btn-primary"> Home</button></a></li>
+                    <ul role="list"  >
+                        <li class="navitem"><a class="nav-links btn-primary" href="#"> Home</a></li>
                         <li class="navitem btn-secondary"><a class="nav-links" href="#">Service</a></li>
                         <li class="navitem btn-secondary"><a class="nav-links" href="#">Contact</a></li>
                         <li class="navitem btn-secondary"><a class="nav-links" href="#">About</a></li>
                     </ul>
                 </nav>
-            </div>
+                <!-- <div class="mobile-navbar-btn">
+                  <i class="fa-light fa-bars" class="mobile-nav-icon"></i>
+                  <i class="fa-sharp fa-light fa-xmark" class="mobile-nav-icon"></i>
+                </div>
+            </div> -->
         </header>
         <!-- ========== End navbar Section ========== -->
         
@@ -37,12 +41,12 @@
                       </h1>
                   <p class="hero-subheading">A huge selection of health and fitness content, healthy recipes <br> and transformation stories to help you get fit and stay fit</p>
                   <div class="hero-btn fs-600">
-                    <button class="btn ">
+                    <a class="btn ">
                       Join Club Now!
-                    </button>
-                    <button class="btn btn-black">
+                    </a>
+                    <a class="btn btn-black">
                       Download Now
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <div class="section-hero--image">
@@ -62,9 +66,7 @@
                             <h1 class="box2-heading">350+</h1>
                           <p class="box2-para">Video tutorial</p>
                           </div>
-                          
-                        </div>
-                       
+                        </div>       
                     </div>
                   </figure>
                 </div>
@@ -75,13 +77,12 @@
     </section>
   <!-- ========== About   Start Section ========== -->
   
-<section class="pages">
-  <div class="container">
+<section >
+  <div class="container ">
     <h2 class="text-align fw-semi-bold fs-800 head2-color">Change Your Habits</h2>
     <p class="text-align ">
       We believe fitness should be accessible to everyone, everywhere, regardless of income or <br>access to a gym.
     </p>
-
   <div class=" grid grid-four--cols">
     <div class="imgall">
       <div class=" first-image">
@@ -140,41 +141,48 @@
 </div>
 </section>
   <!-- ==========   About End Section ========== -->
-  <section class="pages ">
+  <section>
     <div class="container grid grid-two--cols third-page">
       <div class="section-run--content ">
         <h2 class=" fw-semi-bold fs-800 head2-color">Run an Extra <br>
           Mile Easily</h2>
         <p >We believe fitness should be accessible to everyone,<br> everywhere, regardless of income or access to a gym. With <br>hundreds of professional workouts.</p>
+        <br>
         <button class="btn fs-700 ">Join Now</button>
       </div>
-      <div class="imgall">
+      <div class="imgall-run">
         <img class="run" src="images/run.jpg" alt="">
       </div>
     </div>
   </section>
 
-  <section class="pages">
-    <div class="container grid grid-two--cols">
+  <section >
+    <div class="container ">
       <div class="section-color--content ">
         <h2 class=" fw-semi-bold fs-800 head2-color">Trainings and Exercises </h2>
         <p >We believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym.</p>
+      </div> 
+            <div class="grid exercise-img  grid-img-color">
+             <div class="box-1">
+              <img  src="images/exercise1.jpg" alt="">
+             </div>
+             <div class="box-2">
+              <img src="images/exercise2.png" alt="">
+             </div>
+             <div class="box-3">
+              <img src="images/exercise3.png" alt="">
+             </div>
+             <div class="box-4">
+              <img src="images/exercise4.png" alt="">
+             </div>
+             <div class="box-5">
+              <img src="images/exercise5.jpg" alt="">
+             </div>
+             <div class="box-6">
+              <img src="images/exercise6.jpg" alt="">
+             </div>
+            </div>
           </div>
-
-          <div class="imgall">
-
-
-
-
-
-
-
-
-
-
-
-
-
           </div>
   </section>
 
@@ -188,35 +196,152 @@
         <div class="Bmi-chart  grid grid-input--cols">
           <div class="table-chart container">
             <h2 class="fw-semi-bold fs-750 head2-color">BMI Calculator Chart</h2>
+         <table>    
+          <thead>
+            <th>
+              BMI
+            </th>
+            <th>Weight Status</th>
+          </thead>
+          <tbody class=" fw-regular">
+            <tr>
+              <td>Below 18.5</td>
+              <td>Underweight</td>
+            </tr>
+            <tr>
+              <td>18.5-24.9</td>
+              <td>Healthy</td>
+            </tr>
+            <tr>
+              <td>25.0-29.9</td>
+              <td>Overweight</td>
+            </tr>
+            <tr>
+              <td>30.0-and Above</td>
+              <td>Obese</td>
+            </tr>
+          </tbody>
+         </table>
           </div>
           <div class="calc-chart container">
             <h3 class="fw-semi-bold fs-750 head2-color">Calculate your BMI</h3>
             <p class=" chart-para">We believe fitness should be accessible to everyone,<br> everywhere, regardless of  income or access to a gym. </p>
-            <div class="chart-2 grid grid-chart-input">
-              <input class="fs-700 fw-bold input-color  input-1" type="text" placeholder="height/cm">
+            <form class="chart-2 grid grid-chart-input">
+              
+                <input class="fs-700 fw-bold input-color  input-1" type="text" placeholder="height/cm">
               <input class="fs-700 fw-bold input-color input-2" type="text" placeholder="Weight/Kg">
               <input class="fs-700 fw-bold input-color input-3" type="text" placeholder="Age">
               <input class="fs-700 fw-bold input-color input-4" type="text" placeholder="Sex">
-              <input  class="fs-700 fw-bold input-color  input-5" type="text" placeholder="Select any favourite color">
-            </div>
-            <button class="btn fs-600"> Calculate</button>
+              <input  class="fs-700 fw-bold input-color  input-5" type="text" placeholder="Select any favorite color">
+                <input  class="btn fs-700" type="Calculate" value="Calculate">
+            </form>
           </div>
 </section>
 
  <!-- Meet  our team -->
- <section class="pages">
+ <section>
   <div class="container ">
     <div class="our-team  text-align">
       <h2 class=" fw-semi-bold fs-900 head2-color">Meet Our Team </h2>
-      <p >We believe fitness should be accessible to everyone, everywhere, regardless of income or <br> access to a gym.</p>
+      <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or <br> access to a gym.</p>
         </div>
       <div class="our-images grid grid-three--cols">
         <div class="text-1">
-          <h3 class="fw-semi-bold fs-750 head2-color">Jerome Bell</h3>
-          <">Trainer</p>
-          <img src="images/trainer1.png" alt="">
+          <figure>
+            <img src="images/trainer1.png" alt="">
+            <div class="team-content-1">
+              <h3 class="fw-semi-bold fs-750 head2-color">Jerome Bell</h3>
+            <p>Trainer</p>
+            </div>
+          </figure>
+          
         </div>
-        <div class="text">
+        <div class="text-2">
+          <figure>
+            <img src="images/trainer2.png" alt="">
+          </figure>
+          <div class="team-content-2">
+            <h3 class="fw-semi-bold fs-750 head2-color">Jerome Bell</h3>
+          <p>Trainer</p>
+          </div>
+        </div>
+        <div class="text-3">
+          <figure>
+            <img src="images/trainer3.png" alt="">
+          </figure>
+          <div class="team-content-3">
+            <h3 class="fw-semi-bold fs-750 head2-color">Jerome Bell</h3>
+          <p>Trainer</p>
+          </div>
+        </div>
+        <div class="text-4">
+          <figure>
+            <img src="images/trainer4.png" alt="">
+          </figure>
+          <div class="team-content-4">
+            <h3 class="fw-semi-bold fs-750 head2-color">Jerome Bell</h3>
+          <p>Trainer</p>
+          </div>
+        </div>
+        <div class="text-5">
+          <figure>
+            <img src="images/trainer5.png"  alt="">
+          </figure>
+          <div class="team-content-5">
+            <h3 class="fw-semi-bold fs-750 head2-color">Jerome Bell</h3>
+          <p>Trainer</p>
+          </div>
+        </div>
+        <div class="text-6">
+          <figure>
+            <img src="images/trainer6.png" alt="">
+          </figure>
+          <div class="team-content-6">
+            <h3 class="fw-semi-bold fs-750 head2-color">Jerome Bell</h3>
+          <p>Trainer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+ </section>
+
+<footer class=" footer-page">
+  <div class="container grid grid-three--cols-prime">
+    <div class="footer-content">
+      <h1 class="fw-bold fs-900 footer-heading">Fitness</h1>
+    <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym. With hundreds of professional workouts.</p>
+    </div>
+  <div class="footer-2">
+    <h2 class="fw-semi-bold  head2-color h3-head">Get Started</h2>
+    <ul class="footer-ul" role="list">
+      <li>Service</li>
+      <li>Contact Us</li>
+      <li>Affiliate Program</li>
+      <li>About Us</li>
+    </ul>
+  </div>
+  <div class="footer-3" >
+    <h2 class="fw-semi-bold  head2-color h3-head">Get Started</h2>
+    <ul class="footer-ul" role="list">
+      <li>Fitness</li>
+      <li>Platform</li>
+      <li>Workout Library</li>
+      <li>App Design</li>
+    </ul>
+  </div>
+ 
+  <div class="  copy fs-700"> 
+
+    All right reserved &copy;Fitness  2024</div>
+  </div>
+  
+  </div>
+
+</footer>
+
+</body>
+</html>
+        <!-- <div class="text">
           <h3 class="fw-semi-bold fs-750 head2-color">Cameron Williamson</h3>
           <p >Trainer</p>
           <img src="images/trainer2.png" alt="">
@@ -240,24 +365,7 @@
           <h3 class="fw-semi-bold fs-750 head2-color">Theresa Webb</h3>
           <p >Trainer</p>
           <img id="5th-image" src="images/trainer6.png" alt="">
-        </div>
-
-       
-      </div>
-    </div>
- </section>
-
-<footer>
-  <div class="container grid grid-three--cols">
-    <div class="footer-content">
-      <h1 class="fw-bold fs-900 footer-heading">Fitness</h1>
-    <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym. With hundreds of professional workouts.</p>
-    </div>
-  </div>
-  
+        </div> -->
 
 
-
-</footer>
-</body>
-</html>
+        

@@ -7,6 +7,7 @@
 }
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 h1,
 h2,h3,h4,h5,h6{
@@ -83,13 +84,19 @@ a{
 .text-align{
     text-align: center;
 }
+:is(
+.section-hero,
+.section-color--content
+).container:first-child{
+    padding: 6.4rem 2.4rem 2.4rem 2.4rem;}
  .btn{
-    /* display: inline-block; */
+     display: inline-block; 
     background-color: var(--main-color);
     color: var(--font-color);
     border-radius: 2.5rem;    
     padding: 1.2rem 3.2rem;
-   margin: 1.56rem 2.3rem 1rem 0rem;
+   margin: 19rem 2.3rem 1rem 0rem;
+   
     -webkit-border-radius: 2.5rem;
     -moz-border-radius: 2.5rem;
     -ms-border-radius: 2.5rem;
@@ -118,9 +125,9 @@ a{
 }
 .hero-btn{
     display: flex;
-    position: relative;
-    top: 14rem;
-    left: -2rem;
+    flex-wrap: wrap;
+    padding-left: 0;
+    
   }
   .grid{
     display: grid;
@@ -150,8 +157,11 @@ textarea,
 select {
   font: inherit;
 }
-.pages{
+section{
     background-color: var(--section-bg-color);
+}
+section .third-page{
+    background-color: var(--bg-3-color);
 }
 /* ! layout */
 
@@ -199,7 +209,7 @@ select {
  }
  .navbar-brand .first-heading{
     font-weight: 900;
-    font-size: 3.5rem;
+    font-size: 4.8rem;
     color: var(--main-color);
  }
  .navbar{
@@ -211,13 +221,11 @@ select {
  }
 
  /** hero ***  start    Section *****/ 
- main{
-     position: relative; 
-  }  
  .section-hero .grid {
     align-items: center;
     gap: 6.4rem;
     & .hero-subheading {
+        margin-top: 4.8rem;
       letter-spacing: 0.2rem;
       font-size: 1.7rem;
       word-spacing: 0.2rem;
@@ -226,6 +234,9 @@ select {
       position: absolute;
       top:50rem;
       left: 24rem;
+    }
+    & .container{
+        position: relative;
     }
   
     & .hero-heading {
@@ -323,31 +334,29 @@ right: 20rem;
  
 
  /*! about css section  */
- 
  .section-common-heading{
     text-align: center;
  }
-   
        .section-2-tittle{
             text-align: center;
         }
+      
       .imgall img{
             border-radius: 15rem;
             left: 2rem;
            position: relative;
         }
-
         /* ? Run content */
-        .pages .third-page{
+        .third-page{
             background-color: var(--bg-3-color);
             border-radius: 4rem ;
         }
         .section-run--content{
            text-align: left;
            padding-left: 5rem;
-           padding-top: 4.5rem;
+           padding-top: 1.5rem;
         }
-        .imgall .run{
+        .imgall-run .run{
             border-radius: 10rem;
             width: 100%;
             padding-right: 5rem;
@@ -356,9 +365,33 @@ right: 20rem;
  .section-color--content{
      text-align: left; 
  }
-
-
-
+/* ! color-img-section */
+.grid-img-color{
+     grid-template-columns: repeat(3,1fr); 
+     margin: 5rem;
+     /* gap: .5rem; */
+     
+    
+}
+.exercise-img img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+/* .box-1{
+    position: relative;
+    background-color: #a4e480;
+}
+.box-1:before{
+    position: absolute;
+    content: "";
+    background-blend-mode: screen;
+    opacity: 0.3;
+} */
+.container .exercise-img{
+   background-color: var(--bg-4-color);
+} 
 
  /* !Bmi content */
  .fifth-page{
@@ -378,8 +411,7 @@ right: 20rem;
  }
  .grid-input--cols{
     grid-template-columns: repeat(2,1fr);
-    grid-area: nav;
-    
+    grid-area: nav;   
  }
  .chart-para{
     margin-top: 1rem;
@@ -395,44 +427,183 @@ right: 20rem;
     grid-area: footer;
     width: 100%;
 }
+table{
+    width: 120%;
+    height: 60%;
+    margin: 2rem 0 0;
+    text-align: center;
+    border: 1px solid #777777;
+    border-collapse:collapse ;
+    & th{
+        color: var(--font-color);
+        height: 240%;
+    }
+    & tr,td,th{
+        border: .1rem solid #777777; 
+        font-size: 2rem;
+    }
+    & tbody{     
+        color: #777777;
+        font-size: 1rem;
+    }
+}
+
 /* ! our images */
-.pages .our-images{
+ .container .our-images{
     background-color: var(--bg-3-color);
     border-radius: 3rem;
+    position: relative;
+    margin-top: 3rem;
+    padding: 2rem;
  }
  .grid-three--cols{
     grid-template-columns: repeat(3,1fr);
     row-gap: 1rem;
-    /* column-gap: 1rem; */
+    column-gap: 1rem;
  }
  .our-images img{
     border-radius: 3rem;
     width: 100%;
     height: auto;
     padding: 1rem;
-    aspect-ratio: 1/1;
     object-fit: cover;
- }
-
- .our-images .text{
-    /* position: relative; */
-    
-
- }
-
+    aspect-ratio: 1/1;
+ } 
  /*****  footer *****/  
  .footer-heading{
     color: var(--main-color);
+ }.footer-content p{
+margin: 1rem 0 3.2rem 0;
+   
+ }
+ .footer-page{
+    background-color: var(--bg-3-color);
  }
  
+ .grid-three--cols-prime{
+    grid-template-columns: repeat(3,1fr);
+    gap: 28rem;
+ }
  
- 
- 
- 
- 
- 
- 
- 
- 
+ .h3-head{
+    line-height: 8rem;
+    font-size: 3rem;
+ }
+ .container .footer-ul li{
+    font-size: 2rem;
+ }
+ .copy{
+    text-align: center;
+    color: rgb(170, 156, 156);
+    position: relative;
+    left: 50rem;
+ }
  /***** End  footer *****/
- 
+ ::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--font-color);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--footer-bg-color);
+    border-radius: 50px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--main-color);
+  }
+input:focus-visible{
+    outline:0.1rem solid rgb(186, 247, 20);
+}
+
+/* ! scroll animation and scroll snap */
+
+/***** Section media quereis *****/ 
+@media (max-width:576px) {
+
+    html {
+        font-size: 56.25%;
+        /* 1rem=9px */
+    }
+    .section-hero--image img{
+        width: 80%;
+    }
+    .grid-two--cols,.grid-four--cols{
+        grid-template-columns: 1fr;
+    }
+ .grid-four--cols .imgall{
+        text-align: center;
+        margin: 2rem;
+    }
+    .section-navbar .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .section-hero--image{
+        width: 50%;
+        height: auto;
+    }
+    .section-hero--content{
+        
+        & .hero-heading{
+            font-size: 1rem;
+        }
+    }
+/* ! RUN */
+.section-run--content img{
+    width: 50%;
+    height: auto;
+    /* padding: 2rem; */
+}
+.section-run--content{
+
+
+    & btn{
+        margin-top: 2rem;
+    }
+}
+
+/* ! bmi chart */
+.grid-input--cols{
+    grid-template-columns: 1fr;
+    & .table-chart{
+        padding-left: 0;
+    }
+}
+.grid-chart-input{
+
+    & input{
+       column-gap: 1rem;
+    }
+}
+/* ! grid image color */
+.grid-img-color{
+    grid-template-columns: repeat( 2,1fr);
+}
+.exercise-img img{
+    width: 120%;
+    padding-left: 0;
+}
+/* ?our-images */
+.grid-three--cols{
+    grid-template-columns: 1fr
+}
+
+
+
+/* ! footer-part */
+.grid-three--cols-prime{
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+}
+
+
+
+/***** End Section media quereis *****/
