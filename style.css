@@ -95,7 +95,7 @@ a{
     color: var(--font-color);
     border-radius: 2.5rem;    
     padding: 1.2rem 3.2rem;
-   margin: 19rem 2.3rem 1rem 0rem;
+   margin: 1rem 2.3rem 1rem 0rem;
    
     -webkit-border-radius: 2.5rem;
     -moz-border-radius: 2.5rem;
@@ -127,6 +127,7 @@ a{
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
+    margin-top: 19rem;
     
   }
   .grid{
